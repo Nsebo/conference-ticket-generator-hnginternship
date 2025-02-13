@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    width: 100%;
+    gap: 50px;
+    justify-content: space-between;
+}
+.container__Cancel{
+    width: 10rem;
+    text-align: center;
+    cursor: pointer;
+    margin: auto;
+    min-height: 30px;
+    background-color: transparent;
+    border-color: #197686;
+    color: #24A0B5;
+    border-style: groove;
+    border-width: 0.5px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.container__Next{
+    width: 10rem;
+    cursor: pointer;
+    color: #fff;
+    background-color: #24A0B5;
+    width: 10rem;
+    text-align: center;
+    margin: auto;
+    min-height: 30px;
+    border-style: groove;
+    border-width: 0.5px;
+    border-radius: 5px;
+    margin-top: 20px;
+    
+}
+
+@media screen and (max-width: 1024px) {
+.container{
+    display: flex;
+    gap:0px;
+    flex-direction: column-reverse;
+}
+}

@@ -1,0 +1,9 @@
+:root{
+    --font-family:JejuMyeongjo
+}
+.button{
+    background-color: #fff;
+    font-family: var(--font-family);
+    border-radius:12px;
+    cursor: pointer;
+}

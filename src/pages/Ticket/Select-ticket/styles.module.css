@@ -1,0 +1,283 @@
+/* Base container for the entire ticket */
+.ticketContainer {
+    background-color: #08252B;
+    border-color: #0E464F;
+    border-style: groove;
+    border-width: 0.9px;
+    width: 400px;
+    position: relative;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+/* Header of each ticket card */
+.ticketContainer__ticketCardHeader {
+    background-color: #08252B;
+    color: #fff;
+    width: 380px;
+    min-height: 10vh;
+    padding-bottom: 10px;
+    border-width: 0.9px;
+    margin: 20px auto;
+    border-style: groove;
+    border-color: #0E464F;
+    border-radius: 10px;
+    background: linear-gradient(to right, #0E464F, #02191D);
+    text-align: center;
+}
+
+/* Divider between sections */
+.ticketContainer__divider {
+    height: 0.9px;
+    background-color: #0E464F;
+    margin: auto;
+    width: 380px;
+}
+
+/* Header styling for the container */
+.ticketContainer__header {
+    font-family: 'Road Rage';
+    font-style: normal;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 30px;
+    transform: skewX(-10deg);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Body styling for the container */
+.ticketContainer__body {
+    font-family: 'JejuMyeongjo';
+    text-align: center;
+    font-size: 10px;
+    margin: 20px auto;
+}
+
+/* Select container style */
+.ticketContainer__selectContainer {
+    background-color: #08252B;
+    color: #fff;
+    width: 380px;
+    min-height: 15vh;
+    border-width: 0.9px;
+    margin: 20px auto;
+    top: 12px;
+    border-style: groove;
+    border-color: #0E464F;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    position: relative;
+}
+
+/* Header style for select container */
+.ticketContainer__selectContainerHeader {
+    color: #fff;
+    margin-left: 10px;
+    font-size: 10px;
+    padding-top: 15px;
+    position: absolute;
+    left: 0;
+}
+
+/* Ticket card style */
+.ticketContainer__ticketCard {
+    border-color: #197686;
+    display: flex;
+    flex-direction: column;
+    min-width: 5rem;
+    border-radius: 10px;
+    border-width: 0.9px;
+    padding: 5px;
+    border-style: groove;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Selected ticket card state */
+.ticketContainer__ticketCard--selected {
+    background-color: #197686;
+}
+
+/* Header of the ticket card */
+.ticketContainer__ticketCard__Header {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    padding-left: 5px;
+    font-size: 20px;
+    padding-top: 4px;
+    text-align: left;
+}
+
+/* Description text inside the ticket card */
+.ticketContainer__ticketCard__Description {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-top: 4px;
+    text-align: left;
+}
+
+/* Ticket count inside the ticket card */
+.ticketContainer__ticketCard__count {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    padding-top: 4px;
+    padding-left: 5px;
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+/* Styling for the ticket number select dropdown */
+.ticketContainer__ticketNumberSelect {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    width: 380px;
+    padding: 10px 40px 10px 10px;
+    border: 0.9px solid #0E464F;
+    border-radius: 8px;
+    background-color: #02191D;
+    color: #fff;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    margin-top: 33px;
+    margin-left: 10px;
+    position: relative;
+}
+
+/* Custom down arrow for the select input */
+.ticketContainer__ticketNumberSelect::after {
+    content: 'v'; /* Unicode for down arrow */
+    font-size: 18px;
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Wrapper to position the select input properly */
+.ticketContainer__ticketNumberSelectWrapper {
+    position: relative;
+    width: 380px;
+}
+
+/* Navigation buttons for the ticket */
+.ticketContainer__navigation {
+    display: flex;
+    width: 100%;
+    padding-bottom: 20px;
+    margin: auto 10px;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* For smaller screens like mobile */
+@media screen and (max-width: 600px) {
+
+    .ticketContainer__navigation{
+        margin: auto 0px;
+        padding-bottom: 0px;
+    }
+    .ticketContainer {
+        width: 90%; /* Make the container width responsive */
+        padding: 10px;
+    }
+    .ticketContainer__selectContainerHeader{
+        padding-left: 20px;
+        
+    }
+    .ticketContainer__divider {
+        height: 0.9px;
+        background-color: #0E464F;
+        margin: auto;
+        width: 210px;
+    }
+    .ticketContainer__ticketCardHeader {
+        width: 100%;
+        padding-bottom: 15px;
+    }
+    .ticketContainer__ticketCard{
+        margin-top: -1px;
+    }
+
+    .ticketContainer__header {
+        font-size: 20px; /* Smaller font size on mobile */
+    }
+
+    .ticketContainer__ticketCard__Header {
+        font-size: 16px; /* Adjust card header size */
+    }
+
+    .ticketContainer__ticketCard__Description {
+        font-size: 14px; /* Adjust description text size */
+    }
+
+    .ticketContainer__ticketCard__count {
+        font-size: 12px; /* Adjust count text size */
+    }
+
+    .ticketContainer__ticketNumberSelect {
+        width: 100rem;
+        font-size: 14px; /* Adjust select dropdown size */
+    }
+
+    .ticketContainer__ticketNumberSelectWrapper {
+        width: 100%; /* Full width for mobile */
+    }
+}
+
+/* For medium screens like tablets */
+@media screen and (max-width: 1024px) {
+    .ticketContainer {
+        width: 80%;
+        padding: 20px;
+    }
+    .ticketContainer__selectContainerHeader{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .ticketContainer__selectContainer{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        padding: 10px;
+    }
+    .ticketContainer__ticketCardHeader {
+        width: 100%;
+        padding-bottom: 18px;
+    }
+
+    .ticketContainer__header {
+        font-size: 25px; /* Adjust font size for tablets */
+    }
+
+    .ticketContainer__ticketCard__Header {
+        font-size: 18px;
+    }
+
+    .ticketContainer__ticketCard__Description {
+        font-size: 15px;
+    }
+
+    .ticketContainer__ticketCard__count {
+        font-size: 13px;
+    }
+
+    .ticketContainer__ticketNumberSelect {
+        width: 90%; /* Adjust dropdown size */
+    }
+
+    .ticketContainer__ticketNumberSelectWrapper {
+        width: 100%;
+    }
+}

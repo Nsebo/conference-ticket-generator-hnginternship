@@ -1,24 +1,16 @@
-import logo from './logo.svg';
+import SelectTicket from './pages/Ticket/Select-ticket';
+import Layout from './components/UI/layout'
 import './App.css';
+import Header from './components/UI/header';
 
 function App() {
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <Layout>
+    <Header/>
+    <SelectTicket/>
+   </Layout>
   );
 }
 

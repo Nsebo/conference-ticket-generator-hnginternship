@@ -1,0 +1,55 @@
+:root{
+    --font-family:JejuMyeongjo
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    border-radius: 15px;
+    border-width: 0.9px;
+    width: 85%;
+    margin: 20px auto; 
+    height: 50px;
+    margin-top: 20px;
+    border-style: groove;
+    border-color:#197686 ;
+}
+.header__logo{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    margin-top: 1px;
+}
+.header__logo img{
+    width: 30px;
+}
+.header__menuContainer{
+    display: inline-flex;
+    margin-top: -5px;
+}
+.header__menuContainer__menu{
+    list-style: none;
+    color: #fff;
+    margin-left: -20px;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 18px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.header__myTickets{
+    margin-top: 5px;
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .header__menuContainer {
+     display: none;
+    }
+    .header{
+        width: 70%;
+    }
+  }
+  
